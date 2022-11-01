@@ -1,12 +1,12 @@
 @Library('shared1')_
 node('built-in')
 {
-    stage('ContDownload_master')
+    stage('ContDownload_mast')
     {
         shared.newGit("https://github.com/intelliqittrainings/maven.git")
     }
     
-     stage('ContBuild_master')
+     stage('ContBuild_mast')
     {
         shared.newMaven()
     }
