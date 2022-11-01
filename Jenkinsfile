@@ -23,7 +23,7 @@ node('built-in')
                     
     }
     
-     stage('ContDeploy_master')
+     stage('ContDeploy_mast')
     {
         shared.newDeploy("sharedjob","172.31.16.13","prodapp1")
     }
