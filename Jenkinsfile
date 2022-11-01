@@ -13,19 +13,19 @@ node('built-in')
     
          stage('ContDeploy_master')
     {
-        shared.newDeploy("scriptedshared1","172.31.21.218","testapp1")
+        shared.newDeploy("${env.WORKSPACE}","172.31.21.218","testapp1")
     }
     
          stage('ContTest_master')
     {
         shared.newGit("https://github.com/intelliqittrainings/FunctionalTesting.git")
-        shared.newSelenium("sharedjob")
+        shared.newSelenium("${env.WORKSPACE}")
                     
     }
     
      stage('ContDeploy_mast')
     {
-        shared.newDeploy("sharedjob","172.31.16.13","prodapp1")
+        shared.newDeploy("${env.WORKSPACE}","172.31.16.13","prodapp1")
     }
 }
 
