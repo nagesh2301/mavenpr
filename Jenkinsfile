@@ -13,7 +13,7 @@ node('built-in')
     
          stage('ContDeploy_master')
     {
-        shared.newDeploy("${env.WORKSPACE}","172.31.21.218","testapp1")
+        shared.newDeploy("${env.WORKSPACE}","172.31.11.59","testapp1")
     }
     
          stage('ContTest_master')
@@ -25,7 +25,7 @@ node('built-in')
     
      stage('ContDeploy_mast')
     {
-        shared.newDeploy("${env.WORKSPACE}","172.31.16.13","prodapp1")
+        shared.newDeploy("${env.WORKSPACE}","172.31.1.90","prodapp1")
     }
 }
 
